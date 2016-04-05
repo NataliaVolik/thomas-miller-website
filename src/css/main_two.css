@@ -1,0 +1,764 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+.body-show-scroll{
+    overflow-y: scroll;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+@font-face {
+    font-family: UbuntuMono-Bold;
+    src: url(../fonts/UbuntuMono/UbuntuMono-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: UbuntuMono-BoldItalic;
+    src: url(../fonts/UbuntuMono/UbuntuMono-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: UbuntuMono-Italic;
+    src: url(../fonts/UbuntuMono/UbuntuMono-Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: UbuntuMono-Regular;
+    src: url(../fonts/UbuntuMono/UbuntuMono-Regular.ttf) format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4 {
+    position: relative;
+    font-family: UbuntuMono-Bold, sans-serif;
+    font-size: 60px;
+    color: #f6f7f8;
+}
+h1.white,
+h2.white,
+h3.white,
+h4.white {
+    color: #f6f7f8;
+}
+h1 {
+    line-height: 80px
+}
+h2 {
+    font-family: UbuntuMono-Regular, sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px
+}
+h2.white {
+    color: #f6f7f8
+}
+h3 {
+    font-family: UbuntuMono-Regular, sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 15px;
+    line-height: 34px
+}
+h3.white {
+    color: #a8a8b4
+}
+h4 {
+    font-family:UbuntuMono-Regular, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #a8a8b4
+}
+h4.block:after {
+    width: 22px;
+    height: 6px;
+    top: -25px
+}
+h4.white {
+    color: #a8a8b4
+}
+a,
+p {
+    font-family: UbuntuMono-Regular, sans-serif;
+    font-size: 20px;
+    line-height: 38px;
+    text-decoration: none;
+    color: #6c6c78
+}
+a.white,
+p.white {
+    color: #f6f7f8
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    h1 {
+        font-size: 50px;
+        line-height: 70px
+    }
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 1000;
+
+}
+#header .wrapper {
+    width: calc(100% - 66px)
+}
+#header.white #logo {
+    background-position: 0 -34px
+}
+#header.white #menu ul li a:hover {
+    color: #0a0a1e
+}
+#header #logo {
+    float: left;
+    margin-top: 21px;
+    width: 23px;
+    height: 28px;
+    background-position: 0 0;
+
+}
+#header #menu {
+    margin-top: 17px;
+    left: 50%;
+    float: right
+}
+#header #menu ul li {
+    float: right;
+    height: 44px;
+    margin-right: 10px;
+}
+#header #menu ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    line-height: 44px;
+    font-size: 18px;
+    color: #6c6c78;
+    text-align: center;
+    font-family: UbuntuMono-Bold, sans-serif;
+
+}
+#header #menu ul li a.active {
+    color: #ef4641!important
+}
+#header #menu ul li a:hover {
+    color: #6c6c78;
+}
+#header #menu ul li a.active:after {
+    width: 90%;
+}
+#header #menu ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 5%;
+    width: 0;
+    height: 2px;
+    background-color: #ef4641;
+
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+#footer .wrapper {
+    width: calc(100% - 66px)
+}
+#footer p {
+    float: left;
+    line-height: 80px;
+    color: #6c6c78;
+    font-size: 12px
+}
+#footer p span {
+    color: #ef4641
+}
+#footer a {
+    float: left;
+    margin-left: 15px;
+    line-height: 80px;
+
+}
+#footer a:hover {
+    color: #ef4641
+}
+.wrapper {
+    width: 985px;
+    margin: 0 auto;
+    position: relative
+}
+#down-arrow {
+    position: absolute;
+    width: 32px;
+    height: 51px;
+    border-radius: 32px;
+    border: 2px solid #f6f7f8;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -17px;
+    cursor: pointer;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .03);
+
+}
+#down-arrow:hover {
+    opacity: 1!important
+}
+#down-arrow span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: -2px;
+    margin-left: -2px;
+    background-image: url(../images/down-arrow.png);
+    background-size: 32px 51px
+}
+.v-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .wrapper {
+        width: 600px
+    }
+}
+.home {
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a1e;
+    overflow: hidden
+}
+.home .message {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 30px;
+    font-size: 20px;
+    font-style: italic;
+}
+.home .message span {
+    color: #ef4641
+}
+.home .v-center {
+    height: 260px
+}
+.home #menu {
+    display: none
+}
+.home section {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+.home canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0a0a1e
+}
+.home .wrapper {
+    width: 750px
+}
+.home h1 {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    z-index: 1;
+}
+.home #home-menu {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    top: 60px
+}
+.home #home-menu li {
+    width: 200px;
+    height: 60px;
+    background: #0a0a1e;
+    border: 2px solid #6c6c78;
+    display: inline-block!important;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .03);
+}
+.home #home-menu li a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+.home #home-menu li:hover {
+    border: 2px solid #f6f7f8;
+    opacity: 1;
+}
+.home #home-menu li:hover p {
+    color: #f6f7f8
+}
+.home #home-menu li p {
+    font-family: UbuntuMono-Bold, sans-serif;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    line-height: 56px;
+    font-size: 18px;
+    color: #6c6c78;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .home .wrapper {
+        width: 650px
+    }
+    .home #home-menu {
+        top: 40px
+    }
+    .home #home-menu li {
+        width: 160px
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 568px) {
+    .home section .v-center {
+        height: 160px
+    }
+    .home .wrapper {
+        width: 500px
+    }
+    .home h1 {
+        font-size: 30px;
+        line-height: 34px
+    }
+    .home #home-menu {
+        top: -20px
+    }
+}
+#social {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000
+}
+#social a {
+    display: block;
+    float: right;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 480px) {
+    .home .wrapper {
+        width: 300px
+    }
+    .home h1 {
+        font-size: 30px;
+        line-height: 34px
+    }
+}
+.about {
+    background-color: #0a0a1e;
+}
+.about .main {
+    width: 100%;
+    height: 700%
+}
+.about canvas {
+    position: fixed;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    z-index: -2
+}
+.about section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden
+}
+.about section.intro .wrapper {
+    width: 750px
+}
+.myfoto {
+    width: 200px;
+    height: 200px;
+    border: 7px solid #93171F;
+    border-radius: 0 100% 100%;
+
+}
+.about section.intro h1 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+}
+.about section.skills,
+.about section.about-me {
+    background: url(../images/pixel-grid.png) #f6f7f8;
+}
+.about section.skills .wrapper,
+.about section.about-me .wrapper,
+.about section.what-i-do .wrapper{
+    width: 750px
+}
+.about section.skills h2,
+.about section.about-me h2{
+    text-align: center
+
+}
+.about section.skills h2,
+.about section.about-me h2{
+    margin-bottom: 36px;
+    color:#6c6c78;
+}
+.about section.about-me p{
+text-align: left;
+}
+.about section.what-i-do h2{
+    margin-bottom: 36px;
+    text-align: center;
+}
+.about section.what-i-do ul{
+    font-family: UbuntuMono-Regular, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #F6F7F8;
+    list-style-type: circle;
+    margin-left: 21px;
+}
+.about section.skills .content{
+    width: 278px;
+    margin: 0;
+    position: relative;
+    float: left;
+    line-height: 2em;
+}
+.about section.skills .content_right{
+    width: 278px;
+    margin: 0;
+    position: relative;
+    float: right;
+    line-height: 2em;
+}
+.about section.skills .column{
+ width:280px;
+}
+.about section.skills #skill {
+    list-style:none;
+}
+.about section.skills #kill {
+    list-style:none;
+}
+#kill li {
+    margin-bottom:70px;
+    background:#0a0a1e;
+    height:10px;
+    border-radius:3px;
+    border:1px solid #6C6C78;
+    font-family: UbuntuMono-Regular, sans-serif;
+}
+#kill li em {
+    position:relative;
+    top:-30px;
+    color:#f9423a;
+
+}
+#skill li {
+    margin-bottom:70px;
+    background:#0a0a1e;
+    height:10px;
+    border-radius:3px;
+    border:1px solid #6C6C78;
+    font-family: UbuntuMono-Regular, sans-serif;
+}
+#skill li em {
+    position:relative;
+    top:-30px;
+    color:#f9423a;
+}
+.expand {
+    height:4px;
+    margin:2px 0;
+    background: #ffffff;
+    position:absolute;
+}
+
+.html5       { width:90%;  /*-moz-animation:html5 2s ease-out;       -webkit-animation:html5 2s ease-out;*/       }
+.css3        { width:90%;  /*-moz-animation:css3 2s ease-out;        -webkit-animation:css3 2s ease-out; */       }
+.javascript  { width:50%; /* -moz-animation:javascript 2s ease-out;   -webkit-animation:javascript 2s ease-out;*/ }
+.jquery      { width:30%; /* -moz-animation:jquery 2s ease-out;      -webkit-animation:jquery 2s ease-out; */     }
+.bootstrap   { width:80%; /* -moz-animation:bootstrap 2s ease-out;      -webkit-animation:bootstrap 2s ease-out;*/}
+.photoshop   { width:50%; /* -moz-animation:photoshop 2s ease-out;   -webkit-animation:photoshop 2s ease-out; */  }
+.git         { width:90%; /*-moz-animation:git 2s ease-out; -webkit-animation:git 2s ease-out; */}
+.redmine     { width:100%; /* -moz-animation:redmine 2s ease-out;      -webkit-animation:redmine 2s ease-out; */   }
+.jira        { width:80%; /* -moz-animation:jira 2s ease-out;   -webkit-animation:jira 2s ease-out;*/ }
+
+
+/*@-moz-keyframes html5       { 0%  { width:0;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes css3        { 0%  { width:0;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes javascript  { 0%  { width:0;} 100%{ width:50%;}  }*/
+/*@-moz-keyframes jquery      { 0%  { width:0;} 100%{ width:30%;}  }*/
+/*@-moz-keyframes bootstrap   { 0%  { width:0;} 100%{ width:80%;}  }*/
+/*@-moz-keyframes photoshop   { 0%  { width:0;} 100%{ width:50%;}  }*/
+/*@-moz-keyframes git         { 0%  { width:0;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes redmine     { 0%  { width:0;} 100%{ width:100%;}  }*/
+/*@-moz-keyframes jira        { 0%  { width:0;} 100%{ width:80%;} }*/
+
+
+/*@-moz-keyframes html5       { 0%  { width:0;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes css3        { 0%  { width:0;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes javascript  { 0%  { width:0;} 100%{ width:50%;}  }*/
+/*@-moz-keyframes jquery      { 0%  { width:0;} 100%{ width:30%;}  }*/
+/*@-moz-keyframes bootstrap   { 0%  { width:0;} 100%{ width:80%;}  }*/
+/*@-moz-keyframes photoshop   { 0%  { width:0;} 100%{ width:50%;}  }*/
+/*@-moz-keyframes git         { 0%  { width:0;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes redmine     { 0%  { width:0;} 100%{ width:100%;}  }*/
+/*@-moz-keyframes jira        { 0%  { width:0;} 100%{ width:80%;} }*/
+
+.about .onepage-wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    -webkit-transform-style: preserve-3d
+}
+.about .onepage-wrapper .ops-section {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.about .disabled-onepage-scroll,
+.about .disabled-onepage-scroll .wrapper {
+    overflow: auto
+}
+.about .disabled-onepage-scroll .onepage-wrapper .ops-section {
+    position: relative!important;
+    top: auto!important
+}
+.about .disabled-onepage-scroll .onepage-wrapper {
+    -webkit-transform: none!important;
+    -moz-transform: none!important;
+    transform: none!important;
+    -ms-transform: none!important;
+    min-height: 100%
+}
+.about .disabled-onepage-scroll .onepage-pagination {
+    display: none
+}
+.about .disabled-onepage-scroll .onepage-wrapper,
+.about body.disabled-onepage-scroll,
+.about html {
+    position: inherit
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .about section.skills .wrapper,
+    .about section.intro .wrapper,
+    .about section.what-i-do .wrapper {
+        width: 600px
+    }
+}
+.contact {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background: center center #0a0a1e;
+}
+.contact canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1000
+}
+.contact section {
+    width: 100%;
+    height: 100%
+}
+.contact section .wrapper {
+    width: 750px
+}
+.contact section .col:first-child h2,
+.contact section .col:first-child h3 {
+    text-align: center
+}
+.contact section .col:first-child h2 {
+    margin-bottom: 36px
+}
+.contact section .col:first-child h3 {
+    width: 100%;
+    line-height: 55px
+}
+.contact section .col:first-child h3 a {
+    margin-top: 25px;
+    display: block;
+    font-size: 28px;
+}
+
+.contact section .col:first-child h3 a:hover h3 {
+    color: #ef4641!important
+}
+.contact section .col:last-child {
+    width: 590px;
+    margin: 0 auto
+}
+.contact section .col:last-child div {
+    float: left;
+    margin: 20px;
+    text-align: center
+}
+.contact section .col:last-child a {
+    text-decoration: none;
+}
+.contact section .col:last-child a:hover {
+    color: #ef4641
+}
+.contact section .col:last-child h4,
+.contact section .col:last-child p {
+    opacity: 0
+}
+.contact section .col:last-child h4 {
+    margin-bottom: 10px
+}
+.contact section .col:last-child h4:last-of-type {
+    margin-top: 30px
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .contact section .wrapper {
+        width: 600px
+    }
+}
+.portfolio {
+    padding-top: 80px;
+    background-color: #0a0a1e;
+}
+.portfolio #header.white {
+    background-color: #f6f7f8
+}
+.portfolio #footer {
+    position: relative
+}
+.portfolio canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    background-color: #f6f7f8
+}
+.portfolio #header {
+    background: #0a0a1e;
+}
+.portfolio  {
+    left: 7px;
+    margin-bottom: 30px
+}
+
+/* Grid style */
+.wrap {
+    padding: 0 16px 30px;
+}
+
+.list{
+    border-left: solid 5px #B41822;
+    margin-bottom: 50px;
+    padding-left: 20px;
+}
+.list h3 a{
+    color: #f6f7f8;
+    font-size: 28px;
+}
+.list ul li a{
+    color:#831220;
+}
+.list ul li{
+    display: inline;
+    padding-right: 20px;
+}
+.list a:hover {
+   color:#EF4641;
+}
+.portfolio .wrapper{
+    width: 750px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .portfolio #gallery {
+        width: 750px
+    }
+}
+
+.project {
+    background: url(../images/pixel-grid.png) #f6f7f8;
+}
+.project #header.white {
+    background-color: #f6f7f8
+}
+.project #footer {
+    position: relative;
+    float: left
+}
+.project .wrapper {
+    width: 750px
+}
+.proj{
+    margin-top: 100px;
+}
+.project .proj h2 {
+    margin-bottom: 36px;
+    color: #6C6C78;
+    text-align: center;
+}
+.project .proj  p a {
+    color:#ef4641;
+}
+.project .proj  a:hover {
+    color: #0a0a1e;
+}
+.project section .images img {
+    margin-bottom: 10px;
+}
+.project section .images p span{
+    color:#ef4641;
+}
+.project section .images p{
+    margin: 20px 0 5px 0;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .project .wrapper {
+        width: 720px
+    }
+    .project section .proj {
+        float: none;
+        width: 100%!important
+    }
+    .project .images {
+        width: 720px
+    }
+    .project .images img {
+        width: 100%
+    }
+}
+

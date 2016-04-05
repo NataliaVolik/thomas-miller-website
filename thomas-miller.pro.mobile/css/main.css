@@ -1,0 +1,92 @@
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: #0a0a1e;
+}
+body {
+    color: #fff;
+    text-align: center;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+    padding: 30px;
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 20px;
+}
+.cover .fa-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+    /*size p */
+    .lead{
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 992px){
+    .cover-container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+
+    .lead{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+
+    .lead{
+        font-size: 36px;
+    }
+}
